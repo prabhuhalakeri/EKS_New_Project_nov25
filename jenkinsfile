@@ -4,7 +4,9 @@ pipeline {
         stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'Dev', url: 'https://github.com/prabhuhalakeri/EKS_New_Project_nov25.git'
+                git branch: 'Dev',
+                    credentialsId: 'AWS_Cred',
+                    url: 'https://github.com/prabhuhalakeri/EKS_New_Project_nov25.git'
             }
         }
 
